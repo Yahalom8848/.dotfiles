@@ -16,3 +16,9 @@ belak/zsh-utils path:history
 # ===================================================================
 
 belak/zsh-utils path:editor
+
+# ===================================================================
+# * Syntax Highlighting
+# ===================================================================
+
+zdharma-continuum/fast-syntax-highlighting kind:defer
