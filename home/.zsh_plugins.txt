@@ -8,8 +8,10 @@ romkatv/powerlevel10k
 # * Autocompletion
 # ===================================================================
 
+zsh-users/zsh-completions path:src kind:fpath
 belak/zsh-utils path:completion
 belak/zsh-utils path:history
+Aloxaf/fzf-tab kind:defer
 
 # ===================================================================
 # * Keybindings
