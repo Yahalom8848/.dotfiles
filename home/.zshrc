@@ -32,7 +32,12 @@ bindkey -v
 # * Aliases
 # ===================================================================
 
+alias ls="eza --icons always"
+alias ll="ls -la"
+alias lt="ls -T"
+
 alias vim="nvim"
+
 alias clear="clear && neofetch"
 alias cd..="cd .."
 
