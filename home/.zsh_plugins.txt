@@ -11,6 +11,7 @@ romkatv/powerlevel10k
 zsh-users/zsh-completions path:src kind:fpath
 belak/zsh-utils path:completion
 belak/zsh-utils path:history
+Freed-Wu/fzf-tab-source
 Aloxaf/fzf-tab kind:defer
 
 # ===================================================================

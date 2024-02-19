@@ -6,6 +6,11 @@ export EDITOR="vim"
 
 export KEYTIMEOUT=1
 
+export FZF_DEFAULT_OPTS="
+    --color=info:#7aa2f7,prompt:#7aa2f7,pointer:#7dcfff
+    --bind=ctrl-p:toggle-preview
+    --preview 'less {}'"
+
 # ===================================================================
 # * Sources
 # ===================================================================
