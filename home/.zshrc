@@ -10,6 +10,8 @@ export KEYTIMEOUT=1
 # * Sources
 # ===================================================================
 
+[[ -s "/etc/grc.zsh" ]] && source /etc/grc.zsh
+
 source "/usr/share/zsh-antidote/antidote.zsh"
 antidote load
 
