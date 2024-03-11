@@ -1,0 +1,13 @@
+#!/bin/bash
+
+type=$(file -Lb --mime-type "$1")
+
+if [[ $type == inode/directory ]]; then
+    eza -h --color=always --icons=always "$1"
+elif [[ $type == image/* ]]; then
+    timg -g "$(tput lines)x$(tput cols)" -p iterm2 "$1"
+elif [[ $type == binary/* ]]; then
+    hexyl "$1"
+else
+    exit 1
+fi

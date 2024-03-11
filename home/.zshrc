@@ -6,6 +6,7 @@ export EDITOR="vim"
 
 export KEYTIMEOUT=1
 
+export LESS="-R"
 export FZF_DEFAULT_OPTS="
     --color=info:#7aa2f7,prompt:#7aa2f7,pointer:#7dcfff
     --bind=ctrl-p:toggle-preview
@@ -32,9 +33,11 @@ bindkey -v
 # * Aliases
 # ===================================================================
 
-alias ls="eza --icons always"
-alias ll="ls -la"
+alias ls="eza --icons=always"
+alias ll="ls -lha"
 alias lt="ls -T"
+
+alias cat="bat"
 
 alias vim="nvim"
 
