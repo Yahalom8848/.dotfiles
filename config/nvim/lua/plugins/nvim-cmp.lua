@@ -33,6 +33,9 @@ return {
 				["<C-e>"] = cmp.mapping.abort(),
 				["<CR>"] = cmp.mapping.confirm(),
 			}),
+			completion = {
+				completeopts = "menu,menuone,preview,noselect",
+			},
 			snippet = {
 				expand = function(args)
 					require("luasnip").lsp_expand(args.body)
