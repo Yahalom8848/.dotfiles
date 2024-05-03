@@ -26,13 +26,16 @@ return {
 				vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename)
 				vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action)
 
-				vim.keymap.set("n", "<leader>f", function() vim.lsp.buf.format({ async = true }) end)
-			end
+				vim.keymap.set("n", "<leader>f", function()
+					vim.lsp.buf.format({ async = true })
+				end)
+			end,
 		})
 
 		local language_servers = {
+			lua_ls = {},
 		}
-	
+
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 		require("mason-lspconfig").setup({
@@ -44,7 +47,7 @@ return {
 						capabilities = capabilities,
 					})
 				end,
-			}
+			},
 		})
 	end,
 }

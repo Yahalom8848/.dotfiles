@@ -8,5 +8,5 @@ return {
 		vim.keymap.set("n", "<leader>m", vim.cmd.Mason)
 
 		require("mason").setup()
-	end
+	end,
 }

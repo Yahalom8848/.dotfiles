@@ -12,6 +12,8 @@ return {
 
 		null_ls.setup({
 			sources = {
+				null_ls.builtins.diagnostics.selene,
+				null_ls.builtins.formatting.stylua,
 			},
 		})
 
@@ -19,5 +21,5 @@ return {
 			automatic_installation = true,
 			handlers = {},
 		})
-	end
+	end,
 }
