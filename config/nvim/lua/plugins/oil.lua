@@ -6,7 +6,7 @@ return {
 
 		require("oil").setup({
 			view_options = {
-				shoe_hidden = true,
+				show_hidden = true,
 			},
 		})
 	end,
