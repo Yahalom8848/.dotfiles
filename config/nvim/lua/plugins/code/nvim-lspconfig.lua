@@ -15,8 +15,8 @@ return {
 
 			buff_keymap("n", "<leader>df", vim.diagnostic.open_float)
 			buff_keymap("n", "<leader>dl", vim.diagnostic.setloclist)
-			buff_keymap("n", "[d", vim.diagnostic.goto_prev)
-			buff_keymap("n", "]d", vim.diagnostic.goto_next)
+			buff_keymap("n", "<leader>d[", vim.diagnostic.goto_prev)
+			buff_keymap("n", "<leader>d]", vim.diagnostic.goto_next)
 
 			buff_keymap("n", "<leader>gd", vim.lsp.buf.declaration)
 			buff_keymap("n", "<leader>gD", vim.lsp.buf.definition)
