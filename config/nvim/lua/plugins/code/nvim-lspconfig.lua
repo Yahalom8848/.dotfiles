@@ -4,6 +4,8 @@ return {
 	dependencies = {
 		"mason.nvim",
 		"nvim-cmp",
+
+		{ "folke/neodev.nvim", config = true },
 	},
 	config = function()
 		local lspconfig = require("lspconfig")
