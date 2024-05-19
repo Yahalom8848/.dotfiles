@@ -2,7 +2,7 @@
 # * Environment variables
 # ===================================================================
 
-export EDITOR="vim"
+export EDITOR="nvim"
 
 export KEYTIMEOUT=1
 
@@ -38,8 +38,6 @@ alias ll="ls -lha"
 alias lt="ls -T"
 
 alias cat="bat"
-
-alias vim="nvim"
 
 alias clear="clear && neofetch"
 alias cd..="cd .."
