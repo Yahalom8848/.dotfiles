@@ -31,10 +31,11 @@ return {
 			buff_keymap("n", "<leader>cr", vim.lsp.buf.rename)
 			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action)
 
-			buff_keymap("n", "<leader>s", function()
-				vim.lsp.buf.format()
-				vim.cmd.w()
-			end)
+			vim.api.nvim_create_autocmd("BufWritePre", {
+				callback = function()
+					vim.lsp.buf.format()
+				end,
+			})
 		end
 
 		local language_servers = {
