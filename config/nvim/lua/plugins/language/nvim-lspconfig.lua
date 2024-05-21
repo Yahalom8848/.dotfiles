@@ -15,21 +15,21 @@ return {
 				vim.keymap.set(mode, keys, cmd, { buffer = bufnr, desc = desc })
 			end
 
-			buff_keymap("n", "<leader>df", vim.diagnostic.open_float)
-			buff_keymap("n", "<leader>dl", vim.diagnostic.setloclist)
-			buff_keymap("n", "<leader>d[", vim.diagnostic.goto_prev)
-			buff_keymap("n", "<leader>d]", vim.diagnostic.goto_next)
+			buff_keymap("n", "<leader>df", vim.diagnostic.open_float, "[d]iagnostics [f]loting window")
+			buff_keymap("n", "<leader>dl", vim.diagnostic.setloclist, "[d]iagnostics [l]ist")
+			buff_keymap("n", "<leader>d[", vim.diagnostic.goto_prev, "[d]iagnostic previous")
+			buff_keymap("n", "<leader>d]", vim.diagnostic.goto_next, "[d]iagnostic next")
 
-			buff_keymap("n", "<leader>gd", vim.lsp.buf.declaration)
-			buff_keymap("n", "<leader>gD", vim.lsp.buf.definition)
-			buff_keymap("n", "<leader>gt", vim.lsp.buf.type_definition)
-			buff_keymap("n", "<leader>gi", vim.lsp.buf.implementation)
-			buff_keymap("n", "<leader>gr", vim.lsp.buf.references)
+			buff_keymap("n", "<leader>gd", vim.lsp.buf.declaration, "[g]o to [d]eclaration")
+			buff_keymap("n", "<leader>gD", vim.lsp.buf.definition, "[g]o to [D]efinition")
+			buff_keymap("n", "<leader>gt", vim.lsp.buf.type_definition, "[g]o to [t]ype definition")
+			buff_keymap("n", "<leader>gi", vim.lsp.buf.implementation, "[g]o to [i]mplementation")
+			buff_keymap("n", "<leader>gr", vim.lsp.buf.references, "[g]o to [r]eference")
 
-			buff_keymap("n", "<leader>h", vim.lsp.buf.hover)
+			buff_keymap("n", "<leader>h", vim.lsp.buf.hover, "[h]over")
 
-			buff_keymap("n", "<leader>cr", vim.lsp.buf.rename)
-			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action)
+			buff_keymap("n", "<leader>cr", vim.lsp.buf.rename, "[c]ode [r]ename")
+			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction")
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				callback = function()

@@ -8,7 +8,7 @@ return {
 	config = function()
 		local null_ls = require("null-ls")
 
-		vim.keymap.set("n", "<leader>n", vim.cmd.NullLsInfo)
+		vim.keymap.set("n", "<leader>n", vim.cmd.NullLsInfo, { desc = "[n]ull-ls" })
 
 		null_ls.setup({
 			sources = {

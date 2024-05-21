@@ -4,8 +4,8 @@ return {
 	config = function()
 		local gitsigns = require("gitsigns")
 
-		vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk)
-		vim.keymap.set("n", "<leader>hr", gitsigns.reset_hunk)
+		vim.keymap.set("n", "<leader>hp", gitsigns.preview_hunk, { desc = "[h]unk [p]review" })
+		vim.keymap.set("n", "<leader>hr", gitsigns.reset_hunk, { desc = "[h]unk [r]eset" })
 
 		gitsigns.setup({
 			attach_to_untracked = true,

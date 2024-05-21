@@ -5,7 +5,7 @@ return {
 		"jay-babu/mason-null-ls.nvim",
 	},
 	config = function()
-		vim.keymap.set("n", "<leader>m", vim.cmd.Mason)
+		vim.keymap.set("n", "<leader>m", vim.cmd.Mason, { desc = "[m]ason" })
 
 		require("mason").setup()
 	end,
