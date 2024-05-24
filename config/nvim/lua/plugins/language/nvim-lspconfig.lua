@@ -32,6 +32,7 @@ return {
 			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction")
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
+				desc = "Format buffer before write",
 				callback = function()
 					vim.lsp.buf.format()
 				end,
