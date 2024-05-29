@@ -11,14 +11,14 @@ return {
 		local lspconfig = require("lspconfig")
 
 		local on_attach = function(_, bufnr)
-			local buff_keymap = function(mode, keys, cmd, desc)
-				vim.keymap.set(mode, keys, cmd, { buffer = bufnr, desc = desc })
+			local buff_keymap = function(mode, keys, cmd, desc, remap)
+				vim.keymap.set(mode, keys, cmd, { buffer = bufnr, desc = desc, remap = remap })
 			end
 
 			buff_keymap("n", "<leader>df", vim.diagnostic.open_float, "[d]iagnostics [f]loting window")
 			buff_keymap("n", "<leader>dl", vim.diagnostic.setloclist, "[d]iagnostics [l]ist")
-			buff_keymap("n", "<leader>d[", vim.diagnostic.goto_prev, "[d]iagnostic previous")
-			buff_keymap("n", "<leader>d]", vim.diagnostic.goto_next, "[d]iagnostic next")
+			buff_keymap("n", "<leader>dp", vim.diagnostic.goto_prev, "[d]iagnostic [p]revious")
+			buff_keymap("n", "<leader>dn", vim.diagnostic.goto_next, "[d]iagnostic [n]ext")
 
 			buff_keymap("n", "<leader>gd", vim.lsp.buf.declaration, "[g]o to [d]eclaration")
 			buff_keymap("n", "<leader>gD", vim.lsp.buf.definition, "[g]o to [D]efinition")
@@ -30,6 +30,9 @@ return {
 
 			buff_keymap("n", "<leader>cr", vim.lsp.buf.rename, "[c]ode [r]ename")
 			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action, "[c]ode [a]ction")
+
+			buff_keymap({ "n", "v" }, "<leader>cc", "gc", "[c]ode [c]omment", true)
+			buff_keymap({ "n", "v" }, "<leader>ccl", "gcc", "[c]ode [c]omment [l]ine", true)
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				desc = "Format buffer before write",
