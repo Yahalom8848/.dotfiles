@@ -9,7 +9,7 @@ return {
 			d = { name = "[d]iagnostics", _ = "which_key_ignore" },
 			f = { name = "[f]ind", _ = "which_key_ignore" },
 			g = { name = "[g]o to", _ = "which_key_ignore" },
-			h = { name = "[h]unk", _ = "which_key_ignore" },
+			gh = { name = "[g]it [h]unk", _ = "which_key_ignore" },
 		}, { prefix = "<leader>" })
 	end,
 }
