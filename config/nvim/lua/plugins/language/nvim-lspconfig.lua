@@ -45,6 +45,16 @@ return {
 
 		local language_servers = {
 			lua_ls = {},
+			rust_analyzer = {
+				["rust-analyzer"] = {
+					cargo = {
+						features = "all",
+					},
+					check = {
+						command = "clippy",
+					},
+				},
+			},
 		}
 
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
