@@ -27,6 +27,8 @@ return {
 			},
 		})
 
-		vim.cmd.Neotree("show")
+		vim.keymap.set("n", "<leader>t", function()
+			vim.cmd.Neotree("toggle", "show")
+		end, { desc = "[t]ree" })
 	end,
 }
