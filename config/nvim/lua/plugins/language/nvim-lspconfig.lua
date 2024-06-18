@@ -31,12 +31,16 @@ return {
 
 			buff_keymap("n", "<leader>cr", vim.lsp.buf.rename, { desc = "[c]ode [r]ename" })
 			buff_keymap("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "[c]ode [a]ction" })
+			buff_keymap("n", "<leader>ch", function()
+				vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled({ bufnr = bufnr }))
+			end, { desc = "[c]ode [h]int" })
 
 			buff_keymap({ "n", "v" }, "<leader>cc", "gc", { desc = "[c]ode [c]omment", remap = true })
 			buff_keymap({ "n", "v" }, "<leader>ccl", "gcc", { desc = "[c]ode [c]omment [l]ine", remap = true })
 
 			vim.api.nvim_create_autocmd("BufWritePre", {
 				desc = "Format buffer before write",
+				buffer = bufnr,
 				callback = function()
 					vim.lsp.buf.format()
 				end,
