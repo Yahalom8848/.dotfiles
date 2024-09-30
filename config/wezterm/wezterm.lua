@@ -21,5 +21,5 @@ return {
 	-- ===================================================================
 
 	font = wezterm.font("JetBrainsMono Nerd Font"),
-	font_size = 10,
+	font_size = 14,
 }
