@@ -6,6 +6,7 @@ return {
 
 		which_key.register({
 			c = { name = "[c]ode", _ = "which_key_ignore" },
+			cs = { name = "[c]ode [s]urround", _ = "which_key_ignore" },
 			d = { name = "[d]iagnostics", _ = "which_key_ignore" },
 			f = { name = "[f]ind", _ = "which_key_ignore" },
 			g = { name = "[g]o to", _ = "which_key_ignore" },
