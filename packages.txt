@@ -12,6 +12,7 @@ vim
 neovim
 docker
 docker-compose
+xclip
 
 # ===================================================================
 # * Useful
