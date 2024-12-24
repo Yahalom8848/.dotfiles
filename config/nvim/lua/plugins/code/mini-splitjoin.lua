@@ -1,14 +1,14 @@
 return {
 	"echasnovski/mini.splitjoin",
 	event = { "BufReadPre", "BufNewFile" },
+	dependencies = { "which-key.nvim" },
 	config = function()
-		local mini_splitjoin = require("mini.splitjoin")
-		mini_splitjoin.setup({
+		require("mini.splitjoin").setup({
 			mappings = {
-				toggle = "",
+				toggle = "<leader>ct",
 			},
 		})
 
-		vim.keymap.set("n", "<leader>ct", mini_splitjoin.toggle, { desc = "[c]ode [t]oggle spread" })
+		require("which-key").add({ "<leader>ct", group = "[c]ode [t]oggle spread" })
 	end,
 }
