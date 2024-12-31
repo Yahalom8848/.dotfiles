@@ -49,6 +49,8 @@ return {
 
 		local language_servers = {
 			lua_ls = {},
+			clangd = {},
+			cmake = {},
 			rust_analyzer = {
 				["rust-analyzer"] = {
 					cargo = {
