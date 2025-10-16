@@ -14,6 +14,9 @@ return {
 			sources = {
 				null_ls.builtins.diagnostics.selene,
 				null_ls.builtins.formatting.stylua,
+
+				null_ls.builtins.formatting.prettierd,
+				null_ls.builtins.formatting.biome,
 			},
 		})
 

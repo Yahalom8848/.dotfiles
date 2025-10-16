@@ -60,6 +60,8 @@ return {
 				"rust_analyzer",
 				"pylsp",
 				"csharp_ls",
+				"ts_ls",
+				"docker_language_server",
 			},
 		})
 
