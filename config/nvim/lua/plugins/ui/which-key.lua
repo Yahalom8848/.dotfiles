@@ -8,7 +8,8 @@ return {
 			{ "<leader>c", group = "[c]ode" },
 			{ "<leader>d", group = "[d]iagnostics" },
 			{ "<leader>f", group = "[f]ind" },
-			{ "<leader>g", group = "[g]o to / [g]it" },
+			{ "<leader>g", group = "[g]o to" },
+			{ "<leader>u", group = "[u]i" },
 		})
 	end,
 }
