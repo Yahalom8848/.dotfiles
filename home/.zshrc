@@ -41,6 +41,7 @@ alias cat="bat"
 
 alias clear="clear && neofetch"
 alias cd..="cd .."
+alias e="exit"
 
 # ===================================================================
 # * Commands

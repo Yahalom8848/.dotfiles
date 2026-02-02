@@ -4,12 +4,10 @@ return {
 		require("toggleterm").setup()
 		local Terminal = require("toggleterm.terminal").Terminal
 
+		local terminal = Terminal:new({ direction = "float" })
 		vim.keymap.set("n", "<leader>ut", function()
-			local terminal = Terminal:new({
-				dir = vim.fn.expand("#:h"),
-				direction = "float",
-			})
 			terminal:toggle()
+			terminal:change_dir(vim.fn.expand("#:p:h"))
 		end, { desc = "[u]i [t]erminal" })
 
 		local lazygit = Terminal:new({ cmd = "lazygit", direction = "float" })
