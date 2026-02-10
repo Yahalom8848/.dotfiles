@@ -2,6 +2,8 @@
 # * Environment variables
 # ===================================================================
 
+export PATH="$HOME/.cargo/bin:$PATH"
+
 export EDITOR="nvim"
 
 export KEYTIMEOUT=1
@@ -39,7 +41,7 @@ alias lt="ls -T"
 
 alias cat="bat"
 
-alias clear="clear && neofetch"
+alias clear="clear && fastfetch"
 alias cd..="cd .."
 alias e="exit"
 
@@ -47,4 +49,4 @@ alias e="exit"
 # * Commands
 # ===================================================================
 
-neofetch
+fastfetch
