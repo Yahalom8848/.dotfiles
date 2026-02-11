@@ -1,0 +1,12 @@
+configuration {
+	modes: "drun,run";
+	terminal: "wezterm";
+
+	font: "JetBrainsMono Nerd Font 14";
+	show-icons: true;
+
+	kb-row-up: "Up,Control+k";
+	kb-row-down: "Down,Control+j";
+	kb-remove-to-eol: "Control+Shift+e";
+	kb-accept-entry: "Return";
+}
