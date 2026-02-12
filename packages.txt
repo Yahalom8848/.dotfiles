@@ -3,6 +3,7 @@
 # ===================================================================
 
 git
+i3-wm
 zsh
 zsh-antidote
 tmux
@@ -15,6 +16,10 @@ docker-compose
 xclip
 tree-sitter-cli
 pulsaudio
+nmtui
+bluez
+bluetui
+feh
 
 # ===================================================================
 # * Useful
@@ -49,3 +54,4 @@ wezterm
 ttf-jetbrains-mono-nerd
 noto-fonts
 noto-fonts-cjk
+noto-fonts-emoji
