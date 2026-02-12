@@ -2,8 +2,6 @@
 # * Environment variables
 # ===================================================================
 
-export PATH="$HOME/.cargo/bin:$PATH"
-
 export EDITOR="nvim"
 
 export KEYTIMEOUT=1
