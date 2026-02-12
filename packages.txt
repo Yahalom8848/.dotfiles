@@ -40,6 +40,7 @@ lazygit
 fastfetch
 rofi
 polybar
+greenclip
 
 # ===================================================================
 # * UI

@@ -8,18 +8,26 @@ floating_modifier $mod
 exec --no-startup-id dex --autostart --environment i3
 exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_toggle'"
 
+#TODO
+# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
+# screen before suspend. Use loginctl lock-session to lock your screen.
+#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+#TODO
+
 # ===================================================================
 # * Applications
 # ===================================================================
 
 exec_always feh --no-fehbg --bg-scale $HOME/wallpaper
-
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
-bindsym $mod+Return exec wezterm
+exec --no-startup-id greenclip daemon &
 
 bindsym $mod+s exec rofi -show drun
 bindsym $mod+w exec rofi -show window
+bindsym $mod+c exec rofi -show clipboard
+
+bindsym $mod+Return exec wezterm
 
 # ===================================================================
 # * Keybinds

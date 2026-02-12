@@ -1,5 +1,5 @@
 configuration {
-	modes: "drun,run,window";
+	modes: "drun,run,window,clipboard:greenclip print";
 	terminal: "wezterm";
 
 	font: "JetBrainsMono Nerd Font 14";
