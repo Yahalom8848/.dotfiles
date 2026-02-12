@@ -1,7 +1,7 @@
 vim.opt.number = true
 vim.opt.relativenumber = true
 
-vim.opt.wrap = false
+vim.opt.wrap = true
 
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
