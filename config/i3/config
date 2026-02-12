@@ -14,7 +14,7 @@ exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_togg
 # * Applications
 # ===================================================================
 
-exec_always feh --no-fehbg --bg-scale $HOME/wallpaper
+exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/wallpaper
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id greenclip daemon
