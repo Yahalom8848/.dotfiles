@@ -4,6 +4,7 @@
 
 git
 i3-wm
+i3lock
 zsh
 zsh-antidote
 tmux
@@ -20,6 +21,7 @@ nmtui
 bluez
 bluetui
 feh
+xss-lock
 
 # ===================================================================
 # * Useful

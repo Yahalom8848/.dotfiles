@@ -6,13 +6,9 @@ set $mod Mod4
 floating_modifier $mod
 
 exec --no-startup-id dex --autostart --environment i3
-exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_toggle'"
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 
-#TODO
-# xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
-# screen before suspend. Use loginctl lock-session to lock your screen.
-#exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
-#TODO
+exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_toggle'"
 
 # ===================================================================
 # * Applications
@@ -21,7 +17,7 @@ exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_togg
 exec_always feh --no-fehbg --bg-scale $HOME/wallpaper
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id greenclip daemon &
+exec --no-startup-id greenclip daemon
 
 bindsym $mod+s exec rofi -show drun
 bindsym $mod+w exec rofi -show window
@@ -34,6 +30,7 @@ bindsym $mod+Return exec wezterm
 # ===================================================================
 
 bindsym $mod+Shift+End exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes' 'i3-msg exit'"
+bindsym $mod+Escape exec loginctl lock-session
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
