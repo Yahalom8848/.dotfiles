@@ -16,7 +16,7 @@ exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_togg
 
 exec_always --no-startup-id picom -b --config $HOME/.config/picom/picom.conf
 
-exec_always --no-startup-id feh --no-fehbg --bg-scale $HOME/wallpaper
+exec_always --no-startup-id feh --no-fehbg --force-aliasing --bg-fill $HOME/wallpaper
 exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh
 
 exec --no-startup-id greenclip daemon
