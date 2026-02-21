@@ -34,6 +34,8 @@ bindsym $mod+Return exec wezterm
 bindsym $mod+Shift+End exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes' 'i3-msg exit'"
 bindsym $mod+Escape exec loginctl lock-session
 
+bindsym $mod+d exec python $HOME/.config/i3/view_desktop.py
+
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
