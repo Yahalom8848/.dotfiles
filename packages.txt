@@ -30,6 +30,7 @@ grub-theme-vimix
 # ===================================================================
 
 btop
+radeontop
 rocm-smi-lib
 ncdu
 grc
