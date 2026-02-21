@@ -6,7 +6,7 @@ set $mod Mod4
 floating_modifier $mod
 
 exec --no-startup-id dex --autostart --environment i3
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --blur 5 --nofork
 
 exec_always --no-startup-id "setxkbmap -layout us,il -option 'grp:alt_shift_toggle'"
 
@@ -129,5 +129,3 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 font pango:JetBrainsMono Nerd Font 8
 
 for_window [class="^.*"] border pixel 1
-
-gaps inner 10
