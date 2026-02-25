@@ -49,6 +49,7 @@ greenclip
 iotas
 gnome-calculator
 pulsmixer
+flameshot
 
 # ===================================================================
 # * UI
