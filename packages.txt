@@ -50,6 +50,7 @@ iotas
 gnome-calculator
 pulsmixer
 flameshot
+sshfs
 
 # ===================================================================
 # * UI
