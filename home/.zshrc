@@ -39,6 +39,6 @@ alias lt="ls -T"
 
 alias cat="bat"
 
-alias clear="clear && fastfetch"
+alias clear="clear"
 alias cd..="cd .."
 alias e="exit"
